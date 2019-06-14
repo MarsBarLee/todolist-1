@@ -14,3 +14,5 @@ class Display extends React.Component{
         )
     }
 }
+
+export default Display;
