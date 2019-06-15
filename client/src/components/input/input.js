@@ -1,6 +1,7 @@
 import React from 'react';
 const mongodb = require('mongodb');
 const bodyParser = require('body-parser');
+const MongoClient = mongodb.MongoClient;
 const url = 'mongodb://localhost:27017/todoList-db';
 
 
@@ -18,13 +19,9 @@ class Input extends React.Component{
     }
 
     submit(){
-        const MongoClient = mongodb.MongoClient;
-
-        MongoClient.connect(url, (err, db) => {
-    
-         console.log('Kudos. Connected successfully to server')
-         // Perform queries
-        })
+        e.preventDefault()ls
+        let item = this.state.input;
+       
     }
 
     render(){
