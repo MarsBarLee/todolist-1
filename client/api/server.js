@@ -10,6 +10,8 @@ const config = require('./DB.js');
 const cors = require('cors');
 
 //make mongoose into a promise
+// its promise is not a promise
+// at least until 5.0
 //connect to db with url and resolve or check error->
 //whats happening with the .connect method
 mongoose.Promise = global.Promise;
