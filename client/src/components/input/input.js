@@ -1,8 +1,7 @@
 import React from 'react';
 const mongodb = require('mongodb');
-const bodyParser = require('body-parser');
-const MongoClient = mongodb.MongoClient;
-const url = 'mongodb://localhost:27017/todoList-db';
+const axios = require('axios')
+
 
 
 
