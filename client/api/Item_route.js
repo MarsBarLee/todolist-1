@@ -26,7 +26,18 @@ itemRoutes.route('/add').post( () => {
     }).catch(err => {
         res.status(400).send("unable to save to database");
         });
-   
 })
 
-export default itenRoutes;
+// Defined get data(index or listing) route
+itemRoutes.route('/').get(function (req, res) {
+    Business.find(function(err, items){
+    if(err){
+      console.log(err);
+    }
+    else {
+      res.json(businesses);
+    }
+  });
+});
+
+export default itemRoutes;
