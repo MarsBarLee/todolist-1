@@ -17,10 +17,12 @@ class Input extends React.Component{
         this.setState({ input:  event.target.value})
     }
 
-    submit(){
-        e.preventDefault()ls
-        let item = this.state.input;
-       
+    submit(e){
+        e.preventDefault()
+        const obj = {item: this.state.input}
+       axios.post('http://localhost:4000/items/add', obj)
+       .then(res => console.log(res.data))
+    
     }
 
     render(){
